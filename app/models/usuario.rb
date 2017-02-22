@@ -1,7 +1,7 @@
 class Usuario < ApplicationRecord
 	has_many :items	
 	validates :nombre, presence: true
-	validates :email, uniqueness: true
+	validates_uniqueness_of :email
 	before_save :set_capitalize
 	after_destroy :borrar_usuario
 

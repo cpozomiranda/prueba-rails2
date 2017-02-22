@@ -1,0 +1,18 @@
+<h1>Pages#index</h1>
+
+
+<table>
+	<tr>
+		<td>Usuario</td>
+		<td>Item</td>
+		<td>Categoria</td>
+	</tr>
+	<% @p.each do |p| %>
+		<tr>
+			<td><%= p.usuario.nombre %></td>
+			<td><%= p.item.nserie %></td>
+			<td><%= p.item.tamaño %></td>
+			<td><%= p.item.descripcion %></td>
+		</tr>
+	<% end %>
+</table>
